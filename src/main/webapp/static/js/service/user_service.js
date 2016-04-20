@@ -8,7 +8,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
     return {
 
         fetchAllUsers: function() {
-            return $http.get('https://localhost:8443/Spring4HibernateAngular/user/')
+            return $http.get('http://localhost/Spring4HibernateAngular/user/')
                 .then(
                 function(response){
                     return response.data;
@@ -21,7 +21,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
         },
 
         createUser: function(user){
-            return $http.post('https://localhost:8443/Spring4HibernateAngular/user/', user)
+            return $http.post('http://localhost/Spring4HibernateAngular/user/', user)
                 .then(
                 function(response){
                     return response.data;
@@ -34,7 +34,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
         },
 
         updateUser: function(user, id){
-            return $http.put('https://localhost:8443/Spring4HibernateAngular/user/'+id, user)
+            return $http.put('http://localhost/Spring4HibernateAngular/user/'+id, user)
                 .then(
                 function(response){
                     return response.data;
@@ -47,7 +47,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
         },
 
         deleteUser: function(id){
-            return $http.delete('https://localhost:8443/Spring4HibernateAngular/user/'+id)
+            return $http.delete('http://localhost/Spring4HibernateAngular/user/'+id)
                 .then(
                 function(response){
                     return response.data;
